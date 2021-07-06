@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^sblitz.me [NC,OR]
+
+RewriteCond %{HTTP_HOST} ^www.sblitz.me [NC]
+
+RewriteRule ^([^\]+)$ https://stackblitz.com/edit/$1 [L, R=301,NC]
